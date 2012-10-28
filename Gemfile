@@ -36,7 +36,9 @@ gem 'jquery-rails'
 # To use debugger
 gem 'haml'
 
-# Solution from http://stackoverflow.com/questions/9642489/rvm-ruby-1-9-3-rails-3-1-3-cant-start-rails-server-due-to-ruby-debug
-gem 'linecache19', :git => 'git://github.com/mark-moseley/linecache'
-gem 'ruby-debug-base19x', '~> 0.11.30.pre4'
-gem 'ruby-debug19'
+group :development, :test do
+	# Solution from http://stackoverflow.com/questions/9642489/rvm-ruby-1-9-3-rails-3-1-3-cant-start-rails-server-due-to-ruby-debug
+	gem 'linecache19', :git => 'git://github.com/mark-moseley/linecache'
+	gem 'ruby-debug-base19x', '~> 0.11.30.pre4'
+	gem 'ruby-debug19'
+end
